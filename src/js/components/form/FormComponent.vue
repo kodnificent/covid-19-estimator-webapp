@@ -136,7 +136,7 @@
 
             <div class="form__group">
                 <label class="form__label" for="periodType">Will this duration be in days, weeks or months?</label>
-                
+                <input data-period-type hidden>
                 <select
                     data-invalid="false" 
                     class="form__select" 
@@ -214,13 +214,14 @@
 
                 <span class="btn__text">next</span>
             </button>
-
+            <input data-go-estimate disabled>
             <button 
                 :disabled="submitting"
                 v-show="isLastStep" 
                 type="submit" 
                 @click.stop.prevent="submitForm"
-                class="btn btn--rounded btn--shadowed btn--primary mt-2">
+                class="btn btn--rounded btn--shadowed btn--primary mt-2"
+                data-go-estimate>
                 
                 <span class="btn__text">estimate</span>
             </button>
