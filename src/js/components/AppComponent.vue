@@ -10,7 +10,7 @@
                     and other PPE - if we donʼt practice social distancing.
                 </p>
                 
-                <img class="mx-auto mt-4" src="/assets/imgs/corona.svg" height="250" width="250" alt="corona virus" />
+                <img class="mx-auto mt-4" src="./assets/imgs/corona.svg" height="250" width="250" alt="corona virus" />
             </div>
         </section>
 
