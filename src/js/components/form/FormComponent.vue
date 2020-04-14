@@ -1,11 +1,11 @@
 <template>
-    <form ref="form" class="form md:w-1/2 lg:w-1/4" @submit.prevent.stop="formHandler" name="estimation-form">
+    <form ref="form" class="form md:w-1/2 lg:w-1/4" @submit.prevent.stop="submitForm" name="estimation-form">
         <form-progress-indicator v-bind="{ steps, current_step }" />
 
         <fieldset class="form__fieldset" v-show="current_step.sn === 1" :data-active="current_step.sn === 1">
             <legend class="form__legend">
                 Region Information
-                <span class="block text-xs text-gray-600" aria-hidden="true">
+                <span class="block text-xs text-gray-700" aria-hidden="true">
                     All fields are required <span class="text-red-600">*</span>
                 </span>
             </legend>
@@ -298,7 +298,6 @@ export default {
          */
         validateCurrentStep()
         {
-            return true;
             const form = this.$refs['form'];
             const form_data = new FormData(form);
             const rules = this.current_step.rules

@@ -8,9 +8,9 @@ module.exports = {
         colors: {
             primary: {
                 lighter:  '#ffebee',
-                light:    '#e57373',
-                default:  '#e53935',
-                dark:     '#b71c1c',
+                light:    '#ff6659',
+                default:  '#d32f2f',
+                dark:     '#9a0007',
             },
             'on-primary': {
                 lighter:  '#000000',
@@ -29,7 +29,7 @@ module.exports = {
 
         extend: {
             boxShadow: {
-                outline: '0 0 0 3px #e57373',
+                outline: '0 0 0 3px #ff6659',
             },
             borderWidth: {
                 '1': '1px',

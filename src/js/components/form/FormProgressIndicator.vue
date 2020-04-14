@@ -17,7 +17,7 @@
             
             <span class="progress-indicator__icon"></span>
 
-            <span class="progress-indicator__text">{{ step.progress_label }}</span>
+            <button class="progress-indicator__text cursor-default" type="button" :disabled="!step.is_current">{{ step.progress_label }}</button>
         </li>
     </ol>
 </template>
@@ -54,7 +54,7 @@ export default {
                 .progress-indicator__icon
                     @apply bg-primary
                 .progress-indicator__text
-                    @apply text-gray-600
+                    @apply text-gray-700
             &[data-completed=true]
                 .progress-indicator__icon
                     @apply bg-primary-light
