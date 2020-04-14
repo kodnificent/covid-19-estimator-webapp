@@ -26,7 +26,7 @@
         
         <footer class="bg-gray-300 py-4 px-4 text-center">
             <p>
-                Teched up by <a class="text-primary-dark" rel="nofollow" target="__blank" href="https://twitter.com/kodnificent">kodnificent</a> &copy; 2020 Covid-19 Impact Estimator
+                Teched up by <a class="text-primary-dark" rel="nofollow" target="__blank" href="https://twitter.com/_sirvic">kodnificent</a> &copy; 2020 Covid-19 Impact Estimator
             </p>
             <p>
                 <a class="text-primary-dark" rel="nofollow" target="__blank" href="https://github.com/kodnificent/covid-19-estimator-webapp">source code</a>

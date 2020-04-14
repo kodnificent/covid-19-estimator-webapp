@@ -136,7 +136,6 @@
 
             <div class="form__group">
                 <label class="form__label" for="periodType">Will this duration be in days, weeks or months?</label>
-                <input data-period-type hidden>
                 <select
                     data-invalid="false" 
                     class="form__select" 
@@ -146,8 +145,7 @@
                     aria-describedby="periodType-feedback"
                     data-period-type>
 
-                    <option value="" selected>choose an option</option>
-                    <option value="days">days</option>
+                    <option value="days" selected>days</option>
                     <option value="days">weeks</option>
                     <option value="days">months</option>
                 </select>
@@ -214,7 +212,6 @@
 
                 <span class="btn__text">next</span>
             </button>
-            <input data-go-estimate disabled>
             <button 
                 :disabled="submitting"
                 v-show="isLastStep" 
