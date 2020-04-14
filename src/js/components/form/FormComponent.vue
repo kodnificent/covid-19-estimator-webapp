@@ -146,8 +146,8 @@
                     data-period-type>
 
                     <option value="days" selected>days</option>
-                    <option value="days">weeks</option>
-                    <option value="days">months</option>
+                    <option value="weeks">weeks</option>
+                    <option value="months">months</option>
                 </select>
                 
                 <small class="form__feedback" data-invalid="false" id="periodType-feedback" aria-live="polite"></small>
