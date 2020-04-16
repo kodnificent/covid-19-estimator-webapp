@@ -362,7 +362,7 @@ export default {
         {
             if(!this.validateCurrentStep()) return;
 
-            const url = 'http://covid19-estimator-api.herokuapp.com/api/v1/on-covid-19/json';
+            const url = 'https://covid19-estimator-api.herokuapp.com/api/v1/on-covid-19/json';
             const form_data = new FormData(this.$refs['form']);
 
             this.submitting = true;
