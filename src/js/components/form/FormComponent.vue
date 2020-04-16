@@ -189,11 +189,20 @@
         </fieldset>
 
         <div role="alert">
-            <output-component v-if="output" :output="output" />
+            <div v-if="output">
+                <output-component :output="output" />
+                <button
+                    class="btn btn--primary btn--rounded block w-full mt-6"
+                    type="button"
+                    @click="resetForm"
+                >
+                    <span class="btn__text">run new estimate</span>
+                </button>
+            </div>
         </div>
 
         <!-- FORM BUTTON -->
-        <div class="form__group">
+        <div class="form__group" v-if="!output">
             <button 
                 :disabled="isFirstStep || submitting"
                 type="button" 
@@ -228,7 +237,6 @@
 
 <script>
 import { validatejs } from '../../validate';
-import  * as Qs  from "qs";
 export default {
     props: {
         //
@@ -332,6 +340,20 @@ export default {
         },
 
         /**
+         * reset the submission form
+         * 
+         * @return {void}
+         */
+        resetForm()
+        {
+            let form = this.$refs['form'];
+            form.reset();
+            this.current_step = this.steps[0];
+            this.output = null;
+            this.success = false;
+        },
+
+        /**
          * form submit handler
          * 
          * @return void
@@ -345,14 +367,7 @@ export default {
 
             this.submitting = true;
 
-            axios({
-                method: 'POST',
-                url,
-                data: Qs.stringify(form_data),
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                }
-            }).then(res=>{
+            axios.post(url, form_data).then(res=>{
                 this.success = true;
                 this.output = res.data;
                 this.current_step.is_completed = true;
