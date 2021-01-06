@@ -14,7 +14,7 @@
         "@fullhuman/postcss-purgecss": "^2.1.0",
         "@material/feature-targeting": "^4.0.0",
         "autoprefixer": "^9.7.4",
-        "axios": "^0.19",
+        "axios": "^0.21",
         "cross-env": "^5.1",
         "feather-icons": "^4.25.0",
         "laravel-mix": "^4.0.7",
